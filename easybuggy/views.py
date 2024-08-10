@@ -961,7 +961,8 @@ def is_user_exist(username):
 # https://github.com/python/cpython/commit/5b2d9ddf69cecfb9ad4e687fab3f34ecc5a9ea4f#diff-7d35ae5e9e22a15ee979f1cba58bc60a
 # However, the following bug has not been fixed in smtplib (Python) 3.6, so it may cause the security issue depending
 # on mail server that does not correctly implement RFC, such as smtp-mail.outlook.com:
-# https://bugs.python.org/issue32606
+# https://bugs.python.org/
+# This is an example of mail header injection vulnerability.
 def send_email(subject, msg_body):
     msg = MIMEMultipart('alternative')
     msg['Subject'] = subject
