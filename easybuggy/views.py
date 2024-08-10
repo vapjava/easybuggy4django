@@ -962,7 +962,7 @@ def is_user_exist(username):
 # However, the following bug has not been fixed in smtplib (Python) 3.6, so it may cause the security issue depending
 # on mail server that does not correctly implement RFC, such as smtp-mail.outlook.com:
 # https://bugs.python.org/
-# This is an example of mail header injection vulnerability.
+
 def send_email(subject, msg_body):
     msg = MIMEMultipart('alternative')
     msg['Subject'] = subject
